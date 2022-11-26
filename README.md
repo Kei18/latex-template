@@ -1,5 +1,6 @@
 My Foolish Latex Template
 ---
+
 ## Info
 
 - target: xxxx-yy
@@ -21,24 +22,41 @@ My Foolish Latex Template
 
 ![](./fig/raw/phd030415s.gif)
 
-## Directory Structure
+## Note
+
+### compiling
+the template relies on [Latexmk](http://personal.psu.edu/jcc8/software/latexmk/).
+
+### bibtex formatting
+
+Install [bibtex-tidy](https://github.com/FlamingTempura/bibtex-tidy) and then:
 
 ```sh
-.
-├── README.md
-├── abs.tex            # abstract
-├── ack.tex            # acknowledgements
-├── algo               # algorithms
-├── appendix.tex       # appendix
-├── content.tex        # body, my recommendation: do not split!
-├── drafts             # not complete but wanna share
-├── fig
-│   ├── raw
-│   │   └── tmp.jpg    # jpg, png, pdf
-│   └── tmp.tex        # latex file, do not write \figure in content.tex
-├── mystyle.sty        # macro
-├── ref.bib
-├── submission         # PDF, appendix, code.zip, etc
-├── table              # tables
-└── xxxx-main.tex      # main file
+git config core.hooksPath .githooks && chmod a+x .githooks/pre-commit
+```
+
+For each commit, formatting is automatically performed.
+
+### Directory Structure
+```sh
+|-- README.md
+|-- abs.tex            # abstract
+|-- ack.tex            # acknowledgements
+|-- algo               # algorithms
+|   `-- search.tex
+|-- appendix.tex       # appendix
+|-- content.tex        # body, my recommendation: do not split!
+|-- drafts             # not complete but wanna share
+|-- fig
+|   |-- raw            # jpg, png, pdf
+|   |   `-- tmp.jpg
+|   `-- tmp.tex        # latex file, do not write \figure in content.tex
+|-- ref.bib
+|-- sty
+|   |-- algpseudocodex.sty
+|   `-- mystyle.sty    # macro
+|-- submission         # PDF, appendix, code.zip, etc
+|-- table              # tables
+|   `-- table.tex
+`-- xxxx-main.tex      # main file
 ```

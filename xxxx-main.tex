@@ -1,8 +1,14 @@
 \documentclass{article}
 
 \usepackage{graphicx}
+\usepackage{url}
+\usepackage{algorithm}
+\usepackage[noEnd=true,indLines=true,commentColor=black]{sty/algpseudocodex}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{hyperref}
 \usepackage{cleveref}
-\usepackage{mystyle}
+\usepackage{sty/mystyle}
 
 \title{My Foolish Latex Template}
 \author{Anonymous Author(s)}
@@ -14,7 +20,7 @@
 \input{content}
 \input{ack}
 \bibliographystyle{alpha}
-\bibliography{ref}
+\bibliography{ref-macro,ref}
 \input{appendix}
 
 \end{document}

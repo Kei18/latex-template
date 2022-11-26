@@ -1,0 +1,33 @@
+{
+  \newcommand{\open}{\m{\mathit{Open}}}
+  \newcommand{\state}{\m{\mathit{state}}}
+  \newcommand{\parent}{\m{\mathit{parent}}}
+  \newcommand{\goal}{\suf{goal}}
+  %
+  \begin{algorithm}[th!]
+    \caption{General search schema}
+    \label{algo:search}
+    %
+    \begin{algorithmic}[1]
+      \Input{directed graph $G = (V, A)$, start $s \in V$, goals $V\goal \subset V$}
+      \Output{path on $G$ from $s$ to $v \in V\goal$ or \failure}
+%%       %
+      \State $\open \leftarrow \bigl[ \langle \state: s,\;\parent: \bot \rangle \bigr]$
+      \Comment{stack, queue, or priority queue}
+      \While{$\open \neq \emptyset$}
+      \State $n \leftarrow \open.\pop()$
+      \IfSingle{$n.\state \in V\goal$}{\Return $\funcname{backtrack}(n)$}
+      \For{$v \in \funcname{neigh}(n.\state)$}
+      \If{$\lnot\funcname{prunable}(v, \ldots)$}
+      \Comment{\funcname{prunable} returns \true or \false}
+      \State $\open.\push\bigl(\langle\state: v,\;\parent: n\rangle\bigr)$
+      \EndIf
+      \EndFor
+      %
+      \EndWhile
+      %
+      \State \Return \failure
+      %
+    \end{algorithmic}
+  \end{algorithm}
+}

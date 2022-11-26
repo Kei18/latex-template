@@ -1,0 +1,51 @@
+\RequirePackage{xspace}
+\newcommand{\n}[1]{{#1}\xspace}  % normal
+\newcommand{\m}[1]{\ensuremath{#1}\xspace}  % math
+\newcommand{\suf}[1]{^{\text{#1}}}
+\newcommand{\sub}[1]{_{\text{#1}}}
+
+% cleverref
+\Crefname{figure}{Figure}{Figures}
+\crefname{figure}{Fig.}{Fig.}
+\crefname{theorem}{Thrm.}{Thrm.}
+\Crefname{theorem}{Theorem}{Theorems}
+\Crefname{algorithm}{Algorithm}{Algorithms}
+\crefname{algorithm}{Alg.}{Alg.}
+\crefname{line}{Line}{Lines}
+\crefname{table}{Table}{Tables}
+\crefname{section}{Chap.}{Chap.}
+\Crefname{section}{Chapter}{Chapters}
+\crefname{definition}{Def.}{Def.}
+\Crefname{definition}{Definition}{Definitions}
+\crefname{lemma}{Lemma}{Lemmas}
+\Crefname{lemma}{Lemma}{Lemmas}
+\crefname{proposition}{Prop.}{Prop.}
+\Crefname{proposition}{Proposition}{Propositions}
+\crefname{observation}{Observation}{Observations}
+\Crefname{observation}{Observation}{Observations}
+\crefname{equation}{Eq.}{Eq.}
+\Crefname{equation}{Equation}{Equations}
+\Crefname{part}{Part}{Parts}
+\crefname{part}{Part}{Parts}
+\Crefname{chapter}{Chapter}{Chapters}
+\crefname{chapter}{Chap.}{Chap.}
+\crefname{appendix}{Appendix}{Appendices}
+\Crefname{appendix}{Appendix}{Appendices}
+
+% algorithm
+\newcommand{\IfSingle}[2]{\State \textbf{if}~#1~\textbf{then}~#2}
+\newcommand{\Input}[1]{\item[\textbf{input}:~#1]}
+\renewcommand{\Output}[1]{\item[\textbf{output}:~#1]}
+\newcommand{\true}{\m{\texttt{TRUE}}}
+\newcommand{\false}{\m{\texttt{FALSE}}}
+\newcommand{\failure}{\m{\texttt{FAILURE}}}
+\newcommand{\pop}{\m{\funcname{pop}}}
+\newcommand{\push}{\m{\funcname{push}}}
+
+% utils
+\newcommand{\funcname}[1]{\m{\mathsf{#1}}}
+
+% math
+\newcommand{\defeq}{\mathrel{\mathop:}=}
+\newcommand{\argmax}{\mathop{\rm argmax~}\limits}
+\newcommand{\argmin}{\mathop{\rm argmin~}\limits}

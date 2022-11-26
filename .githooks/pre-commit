@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "formatting ref.bib"
+bibtex-tidy ref.bib --sort=year,author --quiet --no-escape
+git add ref.bib
