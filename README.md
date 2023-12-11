@@ -27,12 +27,14 @@ My Foolish Latex Template
 ### compiling
 the template relies on [Latexmk](http://personal.psu.edu/jcc8/software/latexmk/).
 
-### bibtex formatting
+### formatting
 
-Install [bibtex-tidy](https://github.com/FlamingTempura/bibtex-tidy) and then:
+[pre-commit](https://pre-commit.com/) is a convenient tool.
+In particular, I prefer to format bibtex styles with [bibtex-tidy](https://github.com/FlamingTempura/bibtex-tidy).
+Try the following to setup:
 
 ```sh
-git config core.hooksPath .githooks && chmod a+x .githooks/pre-commit
+pre-commit install
 ```
 
 For each commit, formatting is automatically performed.
